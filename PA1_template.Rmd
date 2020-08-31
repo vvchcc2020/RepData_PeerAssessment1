@@ -1,6 +1,7 @@
 ---
 title: "PA1_template.Rmd"
-output: html_document
+output: html_document:
+  keep_md: true
 ---
 
 ```{r setup, include=FALSE}
@@ -102,3 +103,9 @@ ggplot(datos2, aes(x = date, y = mean)) +
   ggtitle("Average number of steps taken")+
   labs(x="date",y="average steps")+facet_grid(weekend~.)
 ```
+
+```{r}
+library(knitr)
+knit2html("PA1_template.Rmd")
+```
+
